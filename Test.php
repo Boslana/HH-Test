@@ -1,36 +1,36 @@
 <?php
 
-$n = 5; // натуральное число
+$n = 10; // натуральное число
 
 $lenghts = array();
 
 $resultArray = array();
 
 for($i = 1; $i <= $n; $i++){
-	$array = array();
+	$numbers = array();
 	
 	do {
-            $rand = rand(1,100);
-        } while (in_array($rand,$lenghts));  
+            $lenght = rand(1,100);
+        } while (in_array($lenght, $lenghts));  
 
-	for($j = 1; $j <= $rand; $j++){
-	    $array[] = rand(1,100);
+	for($j = 1; $j <= $lenght; $j++){
+	    $numbers[] = rand(1,100);
 	}
-	$lenghts[] = count($array);
+	$lenghts[] = $lenght;
 	
 	if(($i % 2) == 0){
-	    sort($array);
+	    sort($numbers);
 	} else {
-	    rsort($array);
+	    rsort($numbers);
 	}
 
-	$resultArray[] = $array;
+	$resultArray[] = $numbers;
 
 }	
 
 // вывод
-foreach ($resultArray as $array){
-	foreach ($array as $number){
+foreach ($resultArray as $numbers){
+	foreach ($numbers as $number){
 		print $number;
 		echo ' ';
 	}
