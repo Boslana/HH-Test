@@ -10,8 +10,8 @@ for($i = 1; $i <= $n; $i++){
 	$array = array();
 	
 	do {
-      $rand = rand(1,100);
-    } while (in_array($rand,$lenghts));  
+            $rand = rand(1,100);
+        } while (in_array($rand,$lenghts));  
 
 	for($j = 1; $j <= $rand; $j++){
 	    $array[] = rand(1,100);
@@ -19,9 +19,9 @@ for($i = 1; $i <= $n; $i++){
 	$lenghts[] = count($array);
 	
 	if(($i % 2) == 0){
-	   sort($array);
+	    sort($array);
 	} else {
-	   rsort($array);
+	    rsort($array);
 	}
 
 	$resultArray[] = $array;
